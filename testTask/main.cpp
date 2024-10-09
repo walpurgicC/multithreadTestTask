@@ -12,7 +12,8 @@
 
 namespace
 {
-    //Class for synchronization of threads lifetime
+    /*Class for synchronization of threads lifetime.
+    Synchronization is necessary to ensure that the buffer does not become destroyed before the consumer has finished working with the pointers from that buffer.*/
     class ThreadSynchronizer
     {
         mutable std::mutex mutex_;
