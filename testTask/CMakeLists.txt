@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 
-add_executable (testTask "testTask.cpp" "testTask.h" "timer.cpp" "settings.h" "ringBuffer.h" "ringBuffer.cpp" "threadSafeQueue.h" "threadSafeQueue.cpp")
+add_executable (testTask "main.cpp" "timer.h" "timer.cpp" "settings.h" "ringBuffer.h" "ringBuffer.cpp" "threadSafeQueue.h")
 

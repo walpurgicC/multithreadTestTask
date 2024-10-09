@@ -49,17 +49,3 @@ public:
         }
     }
 };
-
-//Class for synchronization of threads lifetime
-class ThreadSynchronizer
-{
-    mutable std::mutex mutex_;
-    std::condition_variable cond_;
-    bool lock_ = true;
-public:
-    ThreadSynchronizer() {}
-
-    void wait();
-
-    void release();
-};
