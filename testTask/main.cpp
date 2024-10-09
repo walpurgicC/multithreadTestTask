@@ -12,7 +12,7 @@
 
 namespace
 {
-	class ThreadSynchronizer
+    class ThreadSynchronizer
     {
         mutable std::mutex mutex_;
         std::condition_variable cond_;
@@ -34,10 +34,10 @@ namespace
         }
     };
 	
-	void printToFile(char* data, int size, std::ostream& file_stream)
-	{
-		file_stream.write(data, size);
-	}
+     void printToFile(char* data, int size, std::ostream& file_stream)
+     {
+	file_stream.write(data, size);
+     }
 
     void produce(ThreadSafeQueue<std::pair<int, char*>>& queue, Settings const& settings, ThreadSynchronizer& synchronizer)
     {
@@ -115,11 +115,11 @@ int main(int argc, char* argv[])
 {
     try
     {
-		if (argc < 4)
-		{
-			std::cout << "Not enough arguments!" << std::endl;
-			return 0;
-		}
+	if (argc < 4)
+	{
+	    std::cout << "Not enough arguments!" << std::endl;
+	    return 0;
+	}
 		
         Settings settings{ std::stoi(std::string(argv[1])), std::stoi(std::string(argv[2])), 256, 1048576, std::string(argv[3]) };
 
