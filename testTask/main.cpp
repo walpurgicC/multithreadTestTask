@@ -12,6 +12,7 @@
 
 namespace
 {
+    //Class for synchronization of threads lifetime
     class ThreadSynchronizer
     {
         mutable std::mutex mutex_;
